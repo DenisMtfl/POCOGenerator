@@ -39,3 +39,10 @@ jobs:
           path: bin\Release\          
           directory: POCOGenerator
           type: zip
+          
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+          commit: ${{ github.event.head_commit.message }}
+          artifacts: 'POCOGenerator.zip'
+          token: ${{ secrets.GITHUB_TOKEN }}
