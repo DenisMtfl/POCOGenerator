@@ -5,6 +5,8 @@ on:
     tags:
     - '*'
   workflow_dispatch:
+    inputs:
+      tags:
 
 jobs:  
   build:    
