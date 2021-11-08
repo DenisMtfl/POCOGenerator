@@ -24,9 +24,11 @@ jobs:
         run: cd $GITHUB_WORKSPACE
 
       - name: Restore Packages
+        working-directory: POCOGenerator
         run: nuget restore POCOGenerator.sln
 
       - name: Build Solution
+        working-directory: POCOGenerator
         run: |
           msbuild.exe POCOGenerator.sln /p:platform="Any CPU" /p:configuration="Release"
 
