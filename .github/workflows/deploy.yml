@@ -37,10 +37,10 @@ jobs:
           msbuild.exe POCOGenerator.sln /p:platform="Any CPU" /p:configuration="Release"
           
       - name: Create Archive Release
-        uses: TheDoctor0/zip-release@master
+        uses: thedoctor0/zip-release@master
         with:          
           filename: POCOGenerator.zip    
-          path: bin\Release\          
+          path: bin\Release\
           directory: POCOGenerator
           type: zip
           
@@ -48,5 +48,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: "${{ steps.tag_version.outputs.new_tag }}"
-          artifacts: "/POCOGenerator.zip"
+          artifacts: "POCOGenerator\POCOGenerator.zip"
           token: ${{ secrets.GITHUB_TOKEN }}                                         
