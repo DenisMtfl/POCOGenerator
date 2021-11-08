@@ -40,13 +40,12 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:          
           filename: POCOGenerator.zip    
-          path: bin\Release\
-          directory: POCOGenerator
+          path: bin\Release\          
           type: zip
           
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
           tag: "${{ steps.tag_version.outputs.new_tag }}"
-          artifacts: "POCOGenerator\POCOGenerator.zip"
+          artifacts: "POCOGenerator.zip"
           token: ${{ secrets.GITHUB_TOKEN }}                                         
