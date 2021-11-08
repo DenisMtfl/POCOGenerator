@@ -44,5 +44,6 @@ jobs:
           
       - uses: actions/upload-artifact@v2.2.4
         with:                                 
-          name: my-artifact          
+          name: my-artifact   
+          path: ${{ github.workspace }}/result.zip
           
