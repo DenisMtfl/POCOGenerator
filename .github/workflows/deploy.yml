@@ -48,6 +48,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: "${{ steps.tag_version.outputs.new_tag }}"
-          commit: $GITHUB_SHA
           artifacts: "POCOGenerator.zip"
           token: ${{ secrets.GITHUB_TOKEN }}                                         
