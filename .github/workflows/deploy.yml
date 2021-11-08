@@ -7,8 +7,12 @@ on:
     
   workflow_dispatch:
     inputs:
-      tags:      
-        description: 'Tag auswählen'  
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Tag'   
 
 jobs:  
   build:    
