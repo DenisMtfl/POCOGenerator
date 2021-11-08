@@ -32,10 +32,9 @@ jobs:
         run: |
           msbuild.exe POCOGenerator.sln /p:platform="Any CPU" /p:configuration="Release"
           
-      - name: Upload Artifact
+      - name: Upload Artifact        
         uses: actions/upload-artifact@v1.0.0
         with:
-          name: publish
-          working-directory: POCOGenerator
-          path: bin\Release\
+          name: publish          
+          path: POCOGenerator\bin\Release\
       
