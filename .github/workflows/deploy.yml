@@ -42,7 +42,6 @@ jobs:
           
       - name: Upload Release
         uses: ncipollo/release-action@v1
-        with:
-          commit: ${{ github.event.head_commit.message }}
+        with:          
           artifacts: 'POCOGenerator.zip'
           token: ${{ secrets.GITHUB_TOKEN }}
